@@ -118,7 +118,7 @@ Gnob.prototype.setValue = function(value) {
     return false;
   }
 
-  var position = NATURAL_OFF_DEG + this.ticks[value];
+  var position = NATURAL_OFF_DEG + (value > 0 ? this.ticks[value] : 0);
 
   this.position = this.ticks[value];
   this.rangeElem.value = position;
