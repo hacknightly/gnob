@@ -2,8 +2,8 @@
 Simple, mouse-wheelable, dependency-free knob
 
 # usage
-        <input id="range" type="range" data-gnob/>
-        document.getElementById('range').onchange = function(value) { console.log(value); }
+    <input id="range" type="range" data-gnob/>
+    document.getElementById('range').onchange = function(value) { console.log(value); }
 
 #options
 * data-gnob-max: The max value of the knob (default 0)
