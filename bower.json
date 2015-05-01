@@ -1,0 +1,22 @@
+{
+  "name": "gnob",
+  "main": "gnob.js",
+  "version": "0.1.0",
+  "authors": [
+    "Darrell Banks <hacknightly@gmail.com>"
+  ],
+  "description": "Simple, mouse-wheelable, dependency-free knob",
+  "keywords": [
+    "knob",
+    "audio",
+    "range"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
