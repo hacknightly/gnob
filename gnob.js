@@ -181,8 +181,7 @@ Gnob.prototype.createKnob = function(rangeElem) {
 
   this.bindEvents(knob);
 
-  rangeElem.style.display = 'none';
-  rangeElem.parentNode.appendChild(knob);
+  rangeElem.parentNode.replaceChild(knob, rangeElem);
 };
 
 Gnob.prototype.rotate = function(delta) {
