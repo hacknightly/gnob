@@ -1,6 +1,8 @@
 # Gnob
 Simple, mouse-wheelable, text-input-changeable, dependency-free knob
 
+[demo](http://codepen.io/hacknightly/full/ZGGWbw/)
+
 # Vanilla
     <input id="range" type="range" data-gnob/>
 
