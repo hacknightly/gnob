@@ -3,8 +3,6 @@
 // creates a global 'addWheelListener' method
 // example: addWheelListener( elem, function( e ) { console.log( e.deltaY ); e.preventDefault(); } );
 (function(window, document) {
-  'use strict';
-
   var prefix = '',
     _addEventListener, onwheel, support;
 
@@ -74,7 +72,7 @@ var NATURAL_MAX_POS = 295;
 var Gnob = function(rangeElem) {
   this.settings = this.getSettings(rangeElem);
   this.min      = (this.settings.min || 0);
-  this.max      = this.settings.max ? this.settings.max + 1:10;
+  this.max      = this.settings.max ? this.settings.max:10;
   this.step     = (this.settings.step || 1);
   this.initial  = (this.settings.initial || 0);
   this.diameter = (this.settings.diameter || 100);
@@ -109,7 +107,7 @@ Gnob.prototype.setValue = function(value) {
   value = parseInt(value, 10);
 
   if (value > this.max) {
-    value = this.max - 1;
+    value = this.max;
   }
   else if (value < this.min) {
     value = this.min;
@@ -205,9 +203,11 @@ Gnob.prototype.rotate = function(delta) {
 Gnob.prototype.getTicks = function() {
   var out = [];
   var ticks = NATURAL_MAX_POS - NATURAL_OFF_POS;
-  var betweenTicks = ticks / this.max;
+  var inclusiveMax = this.max + 1;
 
-  for (var i = 0; i < this.max; i++) {
+  var betweenTicks = ticks / inclusiveMax;
+
+  for (var i = 0; i < inclusiveMax; i++) {
     out.push(i * betweenTicks);
   }
 
@@ -284,4 +284,3 @@ Gnob.prototype.bindEvents = function(knobElem) {
     }
   };
 };
-

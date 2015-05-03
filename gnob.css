@@ -63,17 +63,17 @@
 }
 
 .gnob.small  .popover {
-  left: -61px;
+  left: -23px;
   bottom: 36px;
 }
 
 .gnob.medium  .popover {
-  left: -47px;
+  left: -9px;
   bottom: 66px;
 }
 
 .gnob.large  .popover {
-  left: -22px;
+  left: 15px;
   bottom: 110px;
 }
 
@@ -88,6 +88,14 @@
   padding: 7px 10px;
   position: absolute;
   z-index: 4;
+}
+
+.popover input[type='text'] {
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  width: 50px;
 }
 
 .popover::before {
@@ -106,9 +114,3 @@
   display: block;
 }
 
-.popover input[type='text'] {
-  border: none;
-  outline: none;
-  background: rgba(0,0,0,0.85);
-  color: white;
-}
