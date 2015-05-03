@@ -1,4 +1,4 @@
-# gnob
+# Gnob
 Simple, mouse-wheelable, text-input-changeable, dependency-free knob
 
 # Vanilla
@@ -15,10 +15,11 @@ Simple, mouse-wheelable, text-input-changeable, dependency-free knob
 # React
     <Gnob min={0} max={10} onChange={React.PropTypes.func.isRequired} />
 
+# Usage
 * Scroll wheel to change value
 * Double click a gnob to input value (supports up and down arrows)
 
-#options
+#Options
 * (data-gnob-)max: The max value of the knob (default 0)
 * (data-gnob-)min: The min value of the knob (default 10)
 * (data-gnob-)initial: The initial value of the knob (default 0)
