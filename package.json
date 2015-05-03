@@ -1,0 +1,24 @@
+{
+  "name": "gnob",
+  "version": "0.1.7",
+  "description": "Simple, mouse-wheelable, text-input-changeable, dependency-free knob",
+  "main": "gnob.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hacknightly/gnob"
+  },
+  "keywords": [
+    "knob",
+    "audio",
+    "web-audio"
+  ],
+  "author": "Darrell Banks <hacknightly@gmail.com> (http://darrellbanks.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacknightly/gnob/issues"
+  },
+  "homepage": "https://github.com/hacknightly/gnob"
+}
