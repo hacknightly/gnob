@@ -1,8 +1,8 @@
 # Gnob
 Simple, mouse-wheelable, text-input-changeable, dependency-free knob
 
-bower install gnob;
-npm install gnob;
+  bower install gnob;
+  npm install gnob;
 
 [demo](http://codepen.io/hacknightly/full/ZGGWbw/)
 
