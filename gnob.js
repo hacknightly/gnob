@@ -199,16 +199,41 @@ Gnob.prototype.rotate = function(delta) {
 Gnob.prototype.getTicks = function() {
   var ticks          = {};
   var totalDegrees   = Math.abs(NATURAL_OFF_DEG) + NATURAL_MAX_DEG;
-  var degreesPerTick = (this.step / totalDegrees);
+  var degreesPerTick = totalDegrees / this.max;
+  var totalTicks     = this.max / this.step;
+  var values         = this.getValues(this.step, this.max);
 
   for (var i = 0; i < totalDegrees; i++) {
-    var value = parseFloat((i * degreesPerTick).toFixed(this.precision), 10);
+    var value = values[Math.floor((i / totalDegrees) * values.length)];
 
-    ticks[i] = value;
+    ticks[i] = parseFloat(value.toFixed(this.precision), 10);
   }
 
   return ticks;
 };
+
+Gnob.prototype.getValues = function(step, max) {
+  var values = [];
+
+  for (var i = 0; i < max; i += step) {
+    values.push(i);
+  }
+
+  return values;
+};
+
+Gnob.prototype.getDegrees = function(value) {
+  var degrees = 0;
+  var _this   = this;
+
+  Object.keys(this.ticks).forEach(function(key) {
+    var val = _this.ticks[key];
+
+    if (value === val) {degrees = parseInt(key, 10); }
+  });
+
+  return degrees;
+}
 
 Gnob.prototype.tick = function(degrees) {
   var distance = Math.floor(Math.abs(NATURAL_OFF_DEG - degrees));
@@ -244,16 +269,18 @@ Gnob.prototype.bindEvents = function(knobElem) {
   };
 
   _this.input.onkeydown = function(e) {
-    var which = e.keyCode;
+    var which        = e.keyCode;
+    var currentValue = parseFloat(e.target.value, 10);
+    var nextValue    = currentValue + _this.step;
+    var degrees      = _this.getDegrees(nextValue);
 
     if (which === 38) {
-      _this.setValue(_this.degrees + (1 * _this.step));
+      _this.tick(degrees);
     }
     else if (which === 40) {
-      _this.setValue(_this.degrees - (1 * _this.step));
+      
     }
     else if(which === 13) {
-      _this.setValue(_this.degrees);
       _this.popover.classList.remove('open');
     }
   };
