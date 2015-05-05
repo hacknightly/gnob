@@ -62,7 +62,6 @@
 
     }, useCapture || false);
   }
-
 })(window, document);
 
 var NATURAL_OFF_POS = 0;
@@ -118,10 +117,11 @@ Gnob.prototype.setValue = function(value) {
 
   var position = NATURAL_OFF_DEG + (value > 0 ? this.ticks[value] : 0);
 
-  this.position = this.ticks[value];
+  this.position        = this.ticks[value];
   this.rangeElem.value = position;
+  this.input.value     = value;
+  
   this.setRotation(position);
-  this.input.value = value;
 
   this.rangeElemOnChange(value);
 };

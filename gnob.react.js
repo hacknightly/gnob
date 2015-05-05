@@ -153,7 +153,7 @@ var Gnob = React.createClass({
       rotation: degrees
     });
 
-    this._onChange(this.state.value);
+    this._onChange(value);
   },
 
   rotate: function(delta) {
