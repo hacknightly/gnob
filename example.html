@@ -117,12 +117,39 @@
       display: block;
     }
 
+    /* NEW STUFF */
     .popover input[type='text'] {
-      width: 50px;
+      width: 35px;
       border: none;
       outline: none;
       background: rgba(0,0,0,0.85);
       color: white;
+    }
+
+    .medium .popover.right {
+      bottom: 13px;
+      left: 65px;
+    }
+
+    .medium .popover.left {
+      bottom: 13px;
+      left: -67px;
+    }
+
+    .medium .popover.right::before {
+      bottom: -7px;
+      margin-left: -7px;
+      bottom: 10px;
+      left: -3px;
+      transform: rotate(90deg);      
+    }
+
+    .medium .popover.left::before {
+      margin-left: -7px;
+      position: absolute;
+      bottom: 10px;
+      left: 60px;
+      transform: rotate(270deg);
     }
   </style>
   <script type="text/javascript" src="./gnob.js"></script>
@@ -143,6 +170,7 @@
        data-gnob
        data-gnob-size='medium'
        data-gnob-max='10'
-       data-gnob-indicator='blue'/>
+       data-gnob-indicator='blue'
+       data-gnob-popover='right' />
 </body>
 </html>

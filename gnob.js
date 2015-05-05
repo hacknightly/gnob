@@ -159,6 +159,7 @@ Gnob.prototype.createKnob = function(rangeElem) {
   inner.classList.add('inner');
   indicator.classList.add('indicator');
   popover.classList.add('popover');
+  popover.classList.add(this.settings.popover);
   popoverInput.setAttribute('type', 'text');
   popover.appendChild(popoverInput);
   inner.appendChild(indicator);
@@ -260,7 +261,7 @@ Gnob.prototype.bindEvents = function(knobElem) {
   };
 
   _this.input.onblur = function() {
-    _this.popover.classList.remove('open');
+    //_this.popover.classList.remove('open');
   };
 
   _this.inner.ondblclick = function() {

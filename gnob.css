@@ -99,16 +99,16 @@
 }
 
 .popover::before {
-    border-top: 7px solid rgba(0,0,0,0.85);
-    border-right: 7px solid transparent;
-    border-left: 7px solid transparent;
-    bottom: -7px;
-    content: '';
-    display: block;
-    left: 50%;
-    margin-left: -7px;
-    position: absolute;
-  }
+  border-top: 7px solid rgba(0,0,0,0.85);
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  bottom: -7px;
+  content: '';
+  display: block;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+}
 
 .popover.open, .popover.open::before {
   display: block;
