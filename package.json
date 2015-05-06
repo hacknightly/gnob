@@ -1,6 +1,6 @@
 {
   "name": "gnob",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "description": "Simple, mouse-wheelable, text-input-changeable, dependency-free knob",
   "main": "gnob.js",
   "scripts": {
