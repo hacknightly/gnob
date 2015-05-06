@@ -273,7 +273,7 @@ var Gnob = React.createClass({
         <div className='inner' onDoubleClick={this._onDoubleClick} style={{ transform: 'rotate(' + this.state.rotation + 'deg)'}}>
           <div className='indicator'></div>
         </div>
-        <div className={'popover ' + popoverOpenClass}>
+        <div className={'popover ' + popoverOpenClass + ' ' + this.props.popover}>
           <input type='text' value={this.state.value} onChange={this._onInputChange} onBlur={this._onInputBlur} onKeyDown={this._onInputKeyDown}/>
         </div>
       </div>
