@@ -98,6 +98,59 @@
   width: 50px;
 }
 
+.popover input[type='text'] {
+  width: 35px;
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0.85);
+  color: white;
+}
+
+.large .popover.right {
+  bottom: 35px;
+  left: 110px;
+}
+
+.large .popover.left {
+  bottom: 35px;
+  left: -70px;
+}
+
+.medium .popover.right {
+  bottom: 13px;
+  left: 65px;
+}
+
+.medium .popover.left {
+  bottom: 13px;
+  left: -67px;
+}
+
+.small .popover.right {
+  bottom: 0;
+  left: 35px;
+}
+
+.small .popover.left {
+  bottom: 0;
+  left: -67px;
+}
+
+.popover.right::before {
+  bottom: -7px;
+  margin-left: -7px;
+  bottom: 10px;
+  left: -3px;
+  transform: rotate(90deg);
+}
+
+.popover.left::before {
+  margin-left: -7px;
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  transform: rotate(270deg);
+}
 .popover::before {
   border-top: 7px solid rgba(0,0,0,0.85);
   border-right: 7px solid transparent;

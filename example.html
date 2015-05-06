@@ -117,13 +117,22 @@
       display: block;
     }
 
-    /* NEW STUFF */
     .popover input[type='text'] {
       width: 35px;
       border: none;
       outline: none;
       background: rgba(0,0,0,0.85);
       color: white;
+    }
+
+    .large .popover.right {
+      bottom: 35px;
+      left: 110px;
+    }
+
+    .large .popover.left {
+      bottom: 35px;
+      left: -70px;
     }
 
     .medium .popover.right {
@@ -136,15 +145,25 @@
       left: -67px;
     }
 
-    .medium .popover.right::before {
+    .small .popover.right {
+      bottom: 0;
+      left: 35px;
+    }
+
+    .small .popover.left {
+      bottom: 0;
+      left: -67px;
+    }
+
+    .popover.right::before {
       bottom: -7px;
       margin-left: -7px;
       bottom: 10px;
       left: -3px;
-      transform: rotate(90deg);      
+      transform: rotate(90deg);
     }
 
-    .medium .popover.left::before {
+    .popover.left::before {
       margin-left: -7px;
       position: absolute;
       bottom: 10px;
@@ -168,7 +187,7 @@
 <body>
   <input type="range"
        data-gnob
-       data-gnob-size='medium'
+       data-gnob-size='small'
        data-gnob-max='10'
        data-gnob-indicator='blue'
        data-gnob-popover='right' />
